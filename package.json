@@ -1,6 +1,6 @@
 {
   "name": "service-stats",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Application to track Service Statistics.",
   "main": "app.js",
   "repository": {
@@ -27,7 +27,7 @@
   },
   "devDependencies": {},
   "keywords": [
-    "time",
+    "service",
     "tracking",
     "app"
   ],

@@ -11,16 +11,16 @@ var express                     = require("express"),
     passportLocalMongoose       = require("passport-local-mongoose"),
     flash                       = require("connect-flash"),
     User                        = require("./models/user");
-    
-    //requiring routes  
+
+    //requiring routes
     var indexRoutes             = require("./routes/index.js"),
         homeRoutes                 = require("./routes/home");
-    
+
 //==================================================================
 // Mongoose/Body Parser/ View Engine
 //==================================================================
 
-mongoose.connect("mongodb://localhost/time-app");
+mongoose.connect("mongodb://localhost/service-app");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -32,7 +32,7 @@ app.use(flash());
 //==================================================================
 
 app.use(require("express-session")({
-    secret: "Rachel has the cutest booty in the whole wide world, like seriously.",
+    secret: "Rachel is the cutiest cutie in the whole entire world, for realz.",
     resave: false,
     saveUninitialized: false
 }));
@@ -62,5 +62,5 @@ app.use("/home", homeRoutes);
 //==================================================================
 
 app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("***The Time Tracking Application has Started.***");
+    console.log("***Service Application has Started.***");
 });
